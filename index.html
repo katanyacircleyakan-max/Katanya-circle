@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,54 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IMITADORA - Web Owner: Andrey</title>
   <style>
+    /* Background & Font */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background: #fff8f8 url('https://i.imgur.com/YmQkVlh.png') repeat; /* motif Ramadhan (bulan & bintang) */
       color: #333;
     }
+
+    /* Header */
     header {
       background-color: #ff0000;
       color: white;
-      padding: 25px 0;
+      padding: 30px 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.1em;
+      margin-top: 5px;
+    }
+
+    /* Nav */
     nav {
       display: flex;
       justify-content: center;
-      background-color: #ff0000;
+      background-color: #cc0000;
     }
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
     nav a:hover {
-      background-color: #cc0000;
+      background-color: #990000;
     }
+
+    /* Sections */
     section {
-      padding: 20px;
+      padding: 25px 20px;
       max-width: 900px;
       margin: auto;
     }
-    .member {
-      background-color: #ffe5e5;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 8px;
-      font-weight: bold;
+    section h2 {
+      color: #ff0000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff0000;
+      padding-bottom: 5px;
     }
+
+    /* Ramadhan Banner */
+    .ramadhan {
+      background-color: #ffe5e5;
+      border-left: 6px solid #ff0000;
+      padding: 12px 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      font-style: italic;
+      font-size: 1.1em;
+      text-align: center;
+      position: relative;
+    }
+    .ramadhan::before {
+      content: "🌙 ";
+    }
+    .ramadhan::after {
+      content: " 🌟";
+    }
+
+    /* Member Box */
+    .member {
+      background-color: #fff0f0;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .member:hover {
+      transform: scale(1.05);
+      background-color: #ffe0e0;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 15px 0;
       background-color: #ff0000;
       color: white;
       margin-top: 30px;
-    }
-    h2 {
-      color: #ff0000;
+      font-size: 0.95em;
     }
   </style>
 </head>
@@ -72,7 +123,10 @@
 
 <section id="about">
   <h2>Tentang IMITADORA</h2>
-  <p>IMITADORA adalah tempat kumpul teman-teman untuk sharing ide, pengalaman, dan bersenang-senang. Semua anggota dipersilakan ikut dengan semangat positif!</p>
+  <p>IMITADORA adalah circle gabut yang dibuat untuk berkumpul, sharing ide, dan bersenang-senang bersama teman-teman. Semua anggota dipersilakan ikut dengan semangat positif!</p>
+  <div class="ramadhan">
+    Selamat menunaikan ibadah puasa! Semoga Ramadhan kali ini penuh berkah dan kebahagiaan
+  </div>
 </section>
 
 <section id="members">

@@ -9,11 +9,11 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff8f8;
+      background: linear-gradient(to bottom, #fff0f0, #ffe5e5);
       color: #333;
     }
 
-    /* Header dengan ornamen Ramadhan */
+    /* Header */
     header {
       background-color: #ff0000;
       color: white;
@@ -22,115 +22,47 @@
       position: relative;
       overflow: hidden;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-size: 1.1em;
-      margin-top: 5px;
-      font-style: italic;
-    }
-    .tagline {
-      margin-top: 10px;
-      font-size: 1.1em;
-      color: #ffe5e5;
-    }
-    .ornament {
-      position: absolute;
-      font-size: 1.8em;
-      opacity: 0.8;
-      animation: float 6s infinite alternate;
-    }
+    header h1 { font-size: 2.5em; margin: 0; letter-spacing: 2px; }
+    header p { font-size: 1.1em; margin-top: 5px; font-style: italic; }
+    .tagline { margin-top: 10px; font-size: 1.1em; color: #ffe5e5; }
+
+    .ornament { position: absolute; font-size: 2em; opacity: 0.8; animation: float 6s infinite alternate; }
     .ornament1 { top: 10px; left: 20px; }
     .ornament2 { top: 5px; right: 25px; animation-delay: 2s; }
     .ornament3 { bottom: 10px; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
-    }
+    @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
 
     /* Nav */
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #cc0000;
-    }
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #990000;
-    }
+    nav { display: flex; justify-content: center; background-color: #cc0000; }
+    nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    nav a:hover { background-color: #990000; }
 
     /* Section */
-    section {
-      padding: 25px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section h2 {
-      color: #ff0000;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #ff0000;
-      padding-bottom: 5px;
-    }
+    section { padding: 25px 20px; max-width: 900px; margin: auto; }
+    section h2 { color: #ff0000; margin-bottom: 15px; border-bottom: 2px solid #ff0000; padding-bottom: 5px; }
 
     /* Ramadhan Banner */
-    .ramadhan {
-      background-color: #ffe5e5;
-      border-left: 6px solid #ff0000;
-      padding: 12px 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-      font-style: italic;
-      font-size: 1.1em;
-      text-align: center;
-      position: relative;
-    }
-    .ramadhan::before { content: "🌙 "; }
-    .ramadhan::after { content: " 🌟"; }
+    .ramadhan { background-color: #ffe5e5; border-left: 6px solid #ff0000; padding: 12px 15px; margin: 15px 0; border-radius: 5px; font-style: italic; font-size: 1.1em; text-align: center; position: relative; }
+    .ramadhan::before { content: "🌙 "; } .ramadhan::after { content: " 🌟"; }
 
-    /* About Quotes */
-    .quote {
-      background-color: #fff0f0;
-      padding: 12px;
-      margin: 12px 0;
-      border-left: 5px solid #ff0000;
-      border-radius: 5px;
-      font-style: italic;
-    }
+    /* Quote Box */
+    .quote-box { background-color: #fff0f0; padding: 12px; margin: 12px 0; border-left: 5px solid #ff0000; border-radius: 5px; font-style: italic; }
+    .btn { background-color: #ff0000; color: white; border: none; padding: 8px 15px; margin: 5px; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+    .btn:hover { background-color: #cc0000; }
 
     /* Member Box */
-    .member {
-      background-color: #fff0f0;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-      font-weight: bold;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .member:hover {
-      transform: scale(1.05);
-      background-color: #ffe0e0;
-    }
+    .member { background-color: #fff0f0; padding: 12px; margin: 10px 0; border-radius: 10px; font-weight: bold; box-shadow: 0 3px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .member:hover { transform: scale(1.05); background-color: #ffe0e0; }
+
+    /* Notes */
+    .notes { margin-top: 15px; }
+    textarea { width: 100%; height: 100px; padding: 10px; border-radius: 5px; border: 1px solid #ff0000; resize: vertical; }
+    .save-btn { margin-top: 5px; background-color: #ff0000; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; }
+    .save-btn:hover { background-color: #cc0000; }
 
     /* Footer */
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      background-color: #ff0000;
-      color: white;
-      margin-top: 30px;
-      font-size: 0.95em;
-    }
+    footer { text-align: center; padding: 15px 0; background-color: #ff0000; color: white; margin-top: 30px; font-size: 0.95em; }
   </style>
 </head>
 <body>
@@ -152,17 +84,20 @@
 
 <section id="about">
   <h2>Tentang IMITADORA</h2>
-  <p>IMITADORA adalah circle gabut yang dibuat untuk berkumpul, sharing ide, dan bersenang-senang bersama teman-teman. Semua anggota dipersilakan ikut dengan semangat positif!</p>
+  <p>Circle gabut untuk berkumpul, sharing ide, dan bersenang-senang. Semua anggota dipersilakan ikut dengan semangat positif!</p>
 
-  <div class="quote">
-    “Circle ini adalah tempat escape dari rutinitas, tapi tetap positif dan saling support.”
-  </div>
-  <div class="quote">
-    “Tidak ada aturan, hanya kebersamaan! Gabut? Santai aja, yang penting happy bareng teman-teman.”
-  </div>
+  <div class="quote-box" id="quoteBox">“Circle ini adalah tempat escape dari rutinitas, tapi tetap positif dan saling support.”</div>
+  <button class="btn" onclick="newQuote()">Ganti Quote</button>
 
-  <div class="ramadhan">
-    Marhaban ya Ramadhan! Selamat menunaikan ibadah puasa! Semoga Ramadhan kali ini penuh berkah dan kebahagiaan
+  <div class="ramadhan">Marhaban ya Ramadhan! Selamat menunaikan ibadah puasa! 🌙🌟</div>
+
+  <button class="btn" onclick="alert('Acara bukber Circle akan diumumkan segera! 🌙✨')">Bukber</button>
+
+  <div class="notes">
+    <h3>Catatan / Notes</h3>
+    <textarea id="noteArea" placeholder="Tulis catatanmu di sini..."></textarea>
+    <button class="save-btn" onclick="saveNote()">Simpan Catatan</button>
+    <p id="saveMsg" style="color:green;"></p>
   </div>
 </section>
 
@@ -186,6 +121,34 @@
 <footer>
   &copy; 2026 IMITADORA. Web Owner: Andrey
 </footer>
+
+<script>
+  // Quotes array
+  const quotes = [
+    "Gabut? Santai aja, yang penting happy bareng teman-teman.",
+    "Ide liar, tawa nyata.",
+    "Tidak ada aturan, hanya kebersamaan!",
+    "Circle ini adalah tempat escape dari rutinitas, tapi tetap positif dan saling support."
+  ];
+
+  function newQuote() {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quoteBox').innerText = random;
+  }
+
+  // Notes save with localStorage
+  const noteArea = document.getElementById('noteArea');
+  const saveMsg = document.getElementById('saveMsg');
+
+  // Load saved note
+  noteArea.value = localStorage.getItem('circleNote') || '';
+
+  function saveNote() {
+    localStorage.setItem('circleNote', noteArea.value);
+    saveMsg.innerText = "Catatan tersimpan!";
+    setTimeout(() => { saveMsg.innerText = ""; }, 2000);
+  }
+</script>
 
 </body>
 </html>

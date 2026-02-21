@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IMITADORA - Web Owner: Andrey</title>
   <style>
-    /* Background & Font */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff8f8 url('https://i.imgur.com/YmQkVlh.png') repeat; /* motif Ramadhan (bulan & bintang) */
+      background-color: #fff8f8;
       color: #333;
     }
 
-    /* Header */
+    /* Header dengan ornamen Ramadhan */
     header {
       background-color: #ff0000;
       color: white;
-      padding: 30px 0;
+      padding: 40px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -31,6 +30,26 @@
     header p {
       font-size: 1.1em;
       margin-top: 5px;
+      font-style: italic;
+    }
+    .tagline {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #ffe5e5;
+    }
+    .ornament {
+      position: absolute;
+      font-size: 1.8em;
+      opacity: 0.8;
+      animation: float 6s infinite alternate;
+    }
+    .ornament1 { top: 10px; left: 20px; }
+    .ornament2 { top: 5px; right: 25px; animation-delay: 2s; }
+    .ornament3 { bottom: 10px; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
     }
 
     /* Nav */
@@ -50,7 +69,7 @@
       background-color: #990000;
     }
 
-    /* Sections */
+    /* Section */
     section {
       padding: 25px 20px;
       max-width: 900px;
@@ -75,11 +94,17 @@
       text-align: center;
       position: relative;
     }
-    .ramadhan::before {
-      content: "🌙 ";
-    }
-    .ramadhan::after {
-      content: " 🌟";
+    .ramadhan::before { content: "🌙 "; }
+    .ramadhan::after { content: " 🌟"; }
+
+    /* About Quotes */
+    .quote {
+      background-color: #fff0f0;
+      padding: 12px;
+      margin: 12px 0;
+      border-left: 5px solid #ff0000;
+      border-radius: 5px;
+      font-style: italic;
     }
 
     /* Member Box */
@@ -113,6 +138,10 @@
 <header>
   <h1>IMITADORA</h1>
   <p>Web Owner: Andrey</p>
+  <div class="tagline">Gabut bareng, bahagia bareng 😎 | Ide liar, tawa nyata</div>
+  <div class="ornament ornament1">🌙</div>
+  <div class="ornament ornament2">⭐</div>
+  <div class="ornament ornament3">✨</div>
 </header>
 
 <nav>
@@ -124,8 +153,16 @@
 <section id="about">
   <h2>Tentang IMITADORA</h2>
   <p>IMITADORA adalah circle gabut yang dibuat untuk berkumpul, sharing ide, dan bersenang-senang bersama teman-teman. Semua anggota dipersilakan ikut dengan semangat positif!</p>
+
+  <div class="quote">
+    “Circle ini adalah tempat escape dari rutinitas, tapi tetap positif dan saling support.”
+  </div>
+  <div class="quote">
+    “Tidak ada aturan, hanya kebersamaan! Gabut? Santai aja, yang penting happy bareng teman-teman.”
+  </div>
+
   <div class="ramadhan">
-    Selamat menunaikan ibadah puasa! Semoga Ramadhan kali ini penuh berkah dan kebahagiaan
+    Marhaban ya Ramadhan! Selamat menunaikan ibadah puasa! Semoga Ramadhan kali ini penuh berkah dan kebahagiaan
   </div>
 </section>
 

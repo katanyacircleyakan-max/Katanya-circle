@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IMITADORA - Web Owner: Andrey</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* background putih polos */
-    color: #333;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #800000; /* merah tua */
+    }
 
-  /* Header */
-  header {
-    background-color: #ff0000;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    position: relative;
-  }
-  header h1 { font-size: 2.5em; margin: 0; letter-spacing: 2px; }
-  header p { font-size: 1.1em; margin-top: 5px; font-style: italic; }
-  .tagline { margin-top: 10px; font-size: 1.1em; color: #ffe5e5; }
+    header {
+      background: #ff4d4d; /* merah cerah */
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-  /* Ornamen tetap, tidak mengganggu */
-  .ornament-container {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-  }
-  .ornament {
-    position: absolute;
-    font-size: 2em;
-    color: #ffe5e5;
-    opacity: 0.7;
-  }
-  .ornament1 { top: 10px; left: 10%; }
-  .ornament2 { top: 20px; right: 15%; }
-  .ornament3 { bottom: 15px; left: 50%; transform: translateX(-50%); }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
 
-  /* Nav */
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #cc0000;
-  }
-  nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  nav a:hover { background-color: #990000; }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+    }
 
-  /* Section */
-  section {
-    padding: 25px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  section h2 {
-    color: #ff0000;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ff0000;
-    padding-bottom: 5px;
-  }
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
 
-  /* Ramadhan Banner */
-  .ramadhan {
-    background-color: #ffe5e5;
-    border-left: 6px solid #ff0000;
-    padding: 12px 15px;
-    margin: 15px 0;
-    border-radius: 5px;
-    font-style: italic;
-    font-size: 1.1em;
-    text-align: center;
-  }
+    h2 {
+      text-align: center;
+      color: #ff4d4d;
+    }
 
-  /* Quote Box */
-  .quote-box {
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    ul li {
+      background: #ffe6e6;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      display: inline-block;
+      min-width: 150px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ff4d4d;
+      color: white;
+      font-weight: bold;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    .marhaban {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #800000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Circle</h1>
+    <p>"Marhaban ya Ramadhan, bulan penuh berkah dan rahmat"</p>
+  </header>
+
+  <section>
+    <div class="marhaban">Marhaban ya Ramadhan untuk anggota:</div>
+    <ul>
+      <li>Syukron</li>
+      <li>Wildan</li>
+      <li>Riski Wonokusumo</li>
+      <li>Akbar</li>
+      <li>Zahir</li>
+      <li>Faiz</li>
+      <li>Andrey</li>
+    </ul>
+
+    <div class="quote">
+      "Circle ini bukan sembarang circle, tempat berkumpulnya teman dan berkah Ramadhan"
+    </div>
+  </section>
+
+  <footer>
+    Owner: Andrey
+  </footer>
+
+</body>
+</html>

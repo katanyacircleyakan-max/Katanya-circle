@@ -5,85 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circle</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #800000; /* merah tua */
-    }
-
-    header {
-      background: #ff4d4d; /* merah cerah */
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      font-style: italic;
-    }
-
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #ff4d4d;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    ul li {
-      background: #ffe6e6;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 1.2em;
-      font-weight: bold;
-      display: inline-block;
-      min-width: 150px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #ff4d4d;
-      color: white;
-      font-weight: bold;
-    }
-
-    .quote {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      font-size: 1.1em;
-    }
-
-    .marhaban {
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 30px;
-      color: #800000;
-    }
+    body { margin:0; font-family:Arial, sans-serif; }
+    #content { display:none; }
+    header { background:#ff4d4d; color:white; text-align:center; padding:30px 20px; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { font-style:italic; margin-top:10px; }
+    section { padding:30px 20px; max-width:800px; margin:auto; }
+    h2 { text-align:center; color:#ff4d4d; }
+    ul { list-style:none; padding:0; text-align:center; }
+    ul li { background:#ffe6e6; margin:10px; padding:10px; border-radius:8px; display:inline-block; min-width:150px; font-weight:bold; }
+    footer { text-align:center; padding:20px; background:#ff4d4d; color:white; font-weight:bold; }
+    .marhaban { text-align:center; font-size:1.5em; font-weight:bold; margin-bottom:30px; color:#800000; }
+    .quote { text-align:center; font-style:italic; margin-bottom:20px; font-size:1.1em; }
+    #loginBox { text-align:center; margin-top:100px; }
+    #loginBox input { padding:10px; font-size:1em; margin-right:5px; }
   </style>
 </head>
 <body>
 
+<div id="loginBox">
+  <h2>Masukkan Password untuk Mengakses Circle</h2>
+  <input type="password" id="pwd" placeholder="Password">
+  <button onclick="checkPassword()">Masuk</button>
+  <p id="msg" style="color:red;"></p>
+</div>
+
+<div id="content">
   <header>
     <h1>Circle</h1>
     <p>"Marhaban ya Ramadhan, bulan penuh berkah dan rahmat"</p>
@@ -109,6 +56,19 @@
   <footer>
     Owner: Andrey
   </footer>
+</div>
+
+<script>
+function checkPassword() {
+  var pwd = document.getElementById("pwd").value;
+  if(pwd === "circle123") {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    document.getElementById("msg").innerText = "Password salah!";
+  }
+}
+</script>
 
 </body>
 </html>
